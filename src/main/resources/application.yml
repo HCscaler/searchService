@@ -1,0 +1,28 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: TaskService
+  datasource:
+    url: jdbc:mysql://localhost:3306/ToDoLists
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Tushar@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone: http://localhost:8761/eureka
+#     fetch-registry: true
+#     register-with-eureka: true
+# main:
+#    allow-bean-definition-overriding: true
